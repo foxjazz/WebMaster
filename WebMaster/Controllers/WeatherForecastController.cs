@@ -19,6 +19,7 @@ namespace WebMaster.Controllers
             // _logger = logger;
             var tm = new Testme(dg);
             tm.doone("test me now");
+            Testme.mystatic();
         }
 
         [HttpGet(Name = "GetWeatherForecast")]

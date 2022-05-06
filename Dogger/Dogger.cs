@@ -7,16 +7,20 @@ namespace DogManager
         public static Dogger dog;
         public Dogger()
         {
-            Log = new Serilog.LoggerConfiguration()
+            if (Dogger.dog == null)
+            {
+                Log = new Serilog.LoggerConfiguration()
                 .MinimumLevel.Information()
                 .WriteTo.File(@"x:\logs\log.log")
                 .CreateLogger();
-            dog = this;
+            
+                dog = this;
+            }
 
         }
         public void Info(string message)
         {
-            Log.Error(message);
+            Log.Information(message);
             
         }
         public void Error(string message)

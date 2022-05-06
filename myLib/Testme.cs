@@ -13,5 +13,9 @@ namespace myLib
         {
             _dog.Info(data);
         }
+        public static void mystatic()
+        {
+            Dogger.dog.Info("log from my static");
+        }
     }
 }

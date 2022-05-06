@@ -14,8 +14,8 @@ builder.Services.AddSwaggerGen();
 //    .WriteTo.Console()
 //    .WriteTo.File(@"x:\logs\test.log"));
 var dog = new Dogger();
-builder.Services.AddSingleton<IDogger>(_ => new Dogger());
-builder.Services.AddScoped<IDogger, Dogger>();
+builder.Services.AddSingleton<IDogger>(dog);
+// builder.Services.AddScoped<IDogger, Dogger>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
