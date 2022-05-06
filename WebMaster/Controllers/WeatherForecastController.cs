@@ -12,14 +12,17 @@ namespace WebMaster.Controllers
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
+        public static int refcounter;
+
         private readonly ILogger<WeatherForecastController> _logger;
 
         public WeatherForecastController(IDogger dg)
         {
             // _logger = logger;
+            refcounter++;
             var tm = new Testme(dg);
             tm.doone("test me now");
-            Testme.mystatic();
+            Testme.mystatic(refcounter);
         }
 
         [HttpGet(Name = "GetWeatherForecast")]

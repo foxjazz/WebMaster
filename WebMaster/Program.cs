@@ -1,6 +1,7 @@
 
 using Serilog;
 using DogManager;
+using WebMaster.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,7 @@ builder.Services.AddSwaggerGen();
 var dog = new Dogger();
 builder.Services.AddSingleton<IDogger>(dog);
 // builder.Services.AddScoped<IDogger, Dogger>();
+WeatherForecastController.refcounter = 0;
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
