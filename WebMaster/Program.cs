@@ -11,6 +11,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+ConfigurationManager configuration = builder.Configuration;
 //builder.Host.UseSerilog((ctx, lc) => lc
 //    .WriteTo.Console()
 //    .WriteTo.File(@"x:\logs\test.log"));
@@ -19,6 +20,8 @@ builder.Services.AddSingleton<IDogger>(dog);
 // builder.Services.AddScoped<IDogger, Dogger>();
 WeatherForecastController.refcounter = 0;
 var app = builder.Build();
+
+IConfiguration conf = app.Configuration;
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

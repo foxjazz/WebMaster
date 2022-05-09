@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <Logging>
+        <LogLevel>
+            <Default>Information</Default>
+            <Microsoft.AspNetCore>Warning</Microsoft.AspNetCore>
+        </LogLevel>
+    </Logging>
+    <AllowedHosts>*</AllowedHosts>
+    <MySpecial>
+        <special1>special num 1</special1>
+        <special2>special num 2</special2>
+    </MySpecial>
+</root>

@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using Microsoft.AspNetCore.Mvc;
 using myLib;
 using DogManager;
@@ -13,21 +14,34 @@ namespace WebMaster.Controllers
     };
 
         public static int refcounter;
-
+        public IConfiguration conf;
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(IDogger dg)
+        public WeatherForecastController(IDogger dg, IConfiguration c)
         {
             // _logger = logger;
             refcounter++;
             var tm = new Testme(dg);
             tm.doone("test me now");
             Testme.mystatic(refcounter);
+            conf = c;
         }
-
+        
         [HttpGet(Name = "GetWeatherForecast")]
+
+        public string GetSpecial()
+        {
+            var sec = conf.GetSection("MySpecial");
+            
+               var s = sec["special2"];
+            return s;
+        }
+            
+            
+        /*[HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
+            
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
@@ -35,6 +49,6 @@ namespace WebMaster.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
-        }
+        }*/
     }
 }
