@@ -21,9 +21,8 @@ namespace WebMaster.Controllers
         {
             // _logger = logger;
             refcounter++;
-            var tm = new Testme(dg);
+            var tm = new Testme(dg, c);
             tm.doone("test me now");
-            Testme.mystatic(refcounter);
             conf = c;
         }
         
