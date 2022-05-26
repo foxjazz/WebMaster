@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myLib", "myLib\myLib.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLogStacks", "TestLogStacks\TestLogStacks.csproj", "{8B6D0CE9-9E90-4676-9F21-84B59769A15A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestXmlParse", "TestXmlParse\TestXmlParse.csproj", "{9FD0E79C-27EF-41B6-A989-938CAB815482}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlParse", "XmlParse\XmlParse.csproj", "{05195DDD-9BFC-4FC1-966C-0E476AC0DE2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{8B6D0CE9-9E90-4676-9F21-84B59769A15A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B6D0CE9-9E90-4676-9F21-84B59769A15A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B6D0CE9-9E90-4676-9F21-84B59769A15A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FD0E79C-27EF-41B6-A989-938CAB815482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FD0E79C-27EF-41B6-A989-938CAB815482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FD0E79C-27EF-41B6-A989-938CAB815482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FD0E79C-27EF-41B6-A989-938CAB815482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05195DDD-9BFC-4FC1-966C-0E476AC0DE2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05195DDD-9BFC-4FC1-966C-0E476AC0DE2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05195DDD-9BFC-4FC1-966C-0E476AC0DE2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05195DDD-9BFC-4FC1-966C-0E476AC0DE2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
